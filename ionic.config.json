@@ -1,0 +1,7 @@
+{
+  "name": "daily-planner",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
