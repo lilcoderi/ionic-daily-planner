@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'daily-planner',
+  appId: 'com.example.app',
+  appName: 'Daily Planner',
   webDir: 'www'
 };
 

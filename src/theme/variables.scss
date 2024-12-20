@@ -1,2 +1,19 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+:root {
+  /* Primary Color */
+  --ion-color-primary: #8b5acf; /* Pink Bubblegum */
+  --ion-color-primary-rgb: 139, 90, 207; /* Warna hex ke RGB */
+  --ion-color-primary-contrast: #ffffff; /* Teks putih untuk kontras */
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #7a4db6; /* Versi lebih gelap */
+  --ion-color-primary-tint: #9e73d7; /* Versi lebih terang */
+
+  /* Danger Color */
+  --ion-color-danger: #D63A3A; /* Red Clay */
+  --ion-color-danger-rgb: 214, 58, 58;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #bc3333; /* Versi lebih gelap */
+  --ion-color-danger-tint: #e04848; /* Versi lebih terang */
+
+  /* Anda dapat menambahkan warna lainnya seperti success, warning, dll. */
+}

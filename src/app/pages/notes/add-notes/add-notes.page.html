@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="addNote()">
+    <!-- Title Input -->
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input 
+        type="text" 
+        placeholder="Enter note title" 
+        [(ngModel)]="title" 
+        name="title" 
+        required>
+      </ion-input>
+    </ion-item>
+
+    <!-- Description Input -->
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea 
+        placeholder="Enter note description" 
+        [(ngModel)]="description" 
+        name="description" 
+        required>
+      </ion-textarea>
+    </ion-item>
+
+    <!-- Date Picker -->
+    <ion-item>
+      <ion-label position="stacked">Select Date</ion-label>
+      <ion-datetime 
+        display-format="YYYY-MM-DD" 
+        placeholder="Pick a date" 
+        [(ngModel)]="date" 
+        name="date">
+      </ion-datetime>
+    </ion-item>
+
+    <!-- Save Button -->
+    <ion-button expand="block" type="submit">Save Note</ion-button>
+  </form>
+</ion-content>

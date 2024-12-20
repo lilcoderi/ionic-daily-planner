@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Note</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label position="stacked">Title</ion-label>
+    <ion-input [(ngModel)]="title"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-input [(ngModel)]="description"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Date</ion-label>
+    <ion-input [(ngModel)]="date" name="date" type="date" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Time</ion-label>
+    <ion-input [(ngModel)]="time" name="time" type="time"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="saveNote()">Save</ion-button>
+</ion-content>

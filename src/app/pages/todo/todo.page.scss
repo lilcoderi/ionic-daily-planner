@@ -1,0 +1,23 @@
+ion-item {
+  margin: 10px 0;
+}
+
+p {
+  text-align: center;
+  color: var(--ion-color-medium);
+}
+
+.add-notes-container {
+  display: flex;
+  justify-content: flex-end; /* Menempatkan tombol di sisi kanan */
+/* Jarak antara tombol dan daftar notes */
+
+  margin-top: 0.5rem;
+}
+
+.small-button {
+  height: 2.5rem; /* Sesuaikan tinggi tombol */
+  padding: 0 1rem; /* Kurangi padding untuk tombol lebih ramping */
+  font-size: 0.875rem; /* Perkecil ukuran font */
+  line-height: 1; /* Buat proporsi teks tetap rapi */
+}

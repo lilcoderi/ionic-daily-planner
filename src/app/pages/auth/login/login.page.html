@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <!-- Menampilkan gambar di atas header -->
+  <div class="image-container">
+    <img src="assets/icon/icon.png" alt="Logo" class="login-image" />
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email" placeholder="Enter your email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password" placeholder="Enter your password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="login()">Login</ion-button>
+  <ion-button expand="block" fill="clear" (click)="goToRegister()">
+    <span class="account-text">Don't have an account? </span>
+    <span class="register-text">&nbsp;Register</span>
+  </ion-button>
+  
+</ion-content>

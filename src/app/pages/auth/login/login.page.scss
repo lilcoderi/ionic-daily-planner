@@ -1,0 +1,18 @@
+.image-container {
+    text-align: center;
+    margin-top: 20px;  /* Jarak atas gambar */
+  }
+  
+  .login-image {
+    width: 120px;  /* Lebar gambar */
+    height: auto;  /* Menjaga rasio gambar */
+  }
+  .account-text {
+    color: black;
+  }
+  
+  .register-text {
+    color: var(--ion-color-primary);
+    cursor: pointer;
+  }
+  

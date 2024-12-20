@@ -1,0 +1,38 @@
+<ion-content>
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <!-- Calendar Tab -->
+      <ion-tab-button tab="calendar">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Calendar</ion-label>
+      </ion-tab-button>
+
+      <!-- Todo Tab -->
+      <ion-tab-button tab="todo">
+        <ion-icon name="checkmark-circle"></ion-icon>
+        <ion-label>Todo</ion-label>
+      </ion-tab-button>
+
+      <!-- Floating Add Button -->
+       <ion-tab-button>
+      <div class="floating-add-button" (click)="navigateToAddPage()">
+        <ion-icon name="add-outline"></ion-icon>
+      </div>
+    </ion-tab-button>
+      <!-- Notes Tab -->
+      <ion-tab-button tab="notes">
+        <ion-icon name="document"></ion-icon>
+        <ion-label>Notes</ion-label>
+      </ion-tab-button>
+
+      <!-- Account Tab -->
+      <ion-tab-button tab="account">
+        <ion-icon name="person"></ion-icon>
+        <ion-label>Account</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
+  <!-- Router outlet for child components -->
+  <router-outlet></router-outlet>
+</ion-content>

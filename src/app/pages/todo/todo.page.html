@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Todo List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="add-notes-container">
+    <ion-button class="small-button" (click)="goToAddTodo()">
+      <ion-icon name="add-outline" slot="start"></ion-icon>
+      Add Todo
+    </ion-button>
+  </div>
+  <!-- Filter Tanggal -->
+  <ion-item>
+    <ion-label position="stacked">Select Date</ion-label>
+    <input
+      type="date"
+      [value]="filterDate"
+      (change)="toggleFilterDate($event)"
+      placeholder="dd/mm/yy"
+      style="width: 100%; padding: 8px; border-radius: 5px; border: 1px solid #ccc;"
+    />
+  </ion-item>
+
+  <!-- Daftar Todo -->
+  <ion-list>
+    <ion-item *ngFor="let item of filteredTodos" (click)="goToTodoDetails(item.id, $event)">
+      <ion-label>{{ item.title }}</ion-label>
+      <ion-label *ngIf="item.completed" color="success">Completed</ion-label>
+      <ion-label *ngIf="!item.completed" color="danger">Todo</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="item.completed" (ionChange)="markAsDone(item, $event)"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  
+
+  <!-- Tombol Tambah dan Laporan -->
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goToTodoReport()">
+      <ion-icon name="pie-chart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

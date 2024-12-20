@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Gambar di atas -->
+  <div class="image-container">
+    <img src="assets/icon/icon.png" alt="Logo" class="login-image" />
+  </div>
+
+  <!-- Menampilkan data pengguna -->
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input [(ngModel)]="userData['username']" disabled></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input [(ngModel)]="userData['email']" disabled type="email"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tombol untuk pergi ke halaman edit profile -->
+  <ion-button expand="block" (click)="goToEditProfile()">
+    Edit Profile
+  </ion-button>
+
+  <!-- Tombol logout dengan konfirmasi -->
+  <ion-button expand="block" color="danger" (click)="confirmLogout()">
+    Logout
+  </ion-button>
+</ion-content>

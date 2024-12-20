@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/todo"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Todo Report</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="chart-container">
+    <!-- Pie chart container -->
+    <canvas id="todoPieChart"></canvas>
+  </div>
+
+  <div class="todo-stats">
+    <table class="todo-table">
+      <tbody>
+        <tr>
+          <td>Completed Todos</td>
+          <td>{{ completedCount }}</td>
+        </tr>
+        <tr>
+          <td>Not Completed Todos</td>
+          <td>{{ notCompletedCount }}</td>
+        </tr>
+        <tr>
+          <td>Total Todos</td>
+          <td>{{ totalTodos }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</ion-content>

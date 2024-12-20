@@ -1,0 +1,39 @@
+.note-details {
+    .note-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    .note-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+  
+    .note-table td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  
+    .note-table td:first-child {
+      font-weight: bold;
+      width: 30%;
+    }
+  
+    ion-button {
+      margin-top: 1rem;
+    }
+
+    .spinner-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; /* Memastikan spinner berada di tengah layar secara vertikal */
+      }
+      
+      
+   
+      
+  }
+  

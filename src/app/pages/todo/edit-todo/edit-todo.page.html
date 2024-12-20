@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/todo"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Todo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="updateTodo()">
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input [(ngModel)]="title" name="title" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-input [(ngModel)]="description" name="description" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Date</ion-label>
+      <ion-input [(ngModel)]="date" name="date" type="date" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Time</ion-label>
+      <ion-input [(ngModel)]="time" name="time" type="time"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Location</ion-label>
+      <ion-input [(ngModel)]="location" name="location"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Reminder</ion-label>
+      <ion-toggle [(ngModel)]="reminder" name="reminder"></ion-toggle>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" [disabled]="!title || !description || !date">
+      Update Todo
+    </ion-button>
+  </form>
+</ion-content>

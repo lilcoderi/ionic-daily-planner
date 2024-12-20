@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/todo"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Todo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input [(ngModel)]="title" placeholder="Enter the title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea [(ngModel)]="description" placeholder="Enter the description"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked"></ion-label>
+      <ion-datetime display-format="YYYY-MM-DD" [(ngModel)]="date" name="date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Location</ion-label>
+      <ion-input [(ngModel)]="location" placeholder="Enter the location"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Reminder</ion-label>
+      <ion-toggle slot="end" [(ngModel)]="reminder"></ion-toggle>
+    </ion-item>
+
+    <ion-button expand="block" (click)="addTodo()">Save Todo</ion-button>
+  </ion-list>
+</ion-content>

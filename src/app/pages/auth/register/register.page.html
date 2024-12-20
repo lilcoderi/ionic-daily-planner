@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <!-- Menampilkan gambar di atas header -->
+  <div class="image-container">
+    <img src="assets/icon/icon.png" alt="Logo" class="login-image" />
+  </div>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">Username</ion-label>
+      <ion-input 
+        type="text" 
+        [(ngModel)]="username" 
+        placeholder="Enter your username">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input 
+        type="email" 
+        [(ngModel)]="email" 
+        placeholder="Enter your email">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input 
+        type="password" 
+        [(ngModel)]="password" 
+        placeholder="Enter your password">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Confirm Password</ion-label>
+      <ion-input 
+        type="password" 
+        [(ngModel)]="confirmPassword" 
+        placeholder="Re-enter your password">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="block" (click)="register()">Register</ion-button>
+  <ion-button expand="block" fill="clear" (click)="goToLogin()">
+    <span style="color: black;">Already have an account? </span>
+    <span style="color: var(--ion-color-primary); cursor: pointer;">&nbsp;Login</span>
+  </ion-button>
+  
+</ion-content>

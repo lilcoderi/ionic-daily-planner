@@ -1,0 +1,32 @@
+ion-tab-bar {
+  display: flex;
+  justify-content: space-between; /* Untuk memberikan jarak antar tab */
+}
+
+.floating-add-button {
+  position: absolute;
+  bottom: 0px; /* Lebih dekat ke bawah */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px; /* Lebih kecil */
+  height: 50px; /* Lebih kecil */
+  background-color: #8b5acf; /* Warna utama */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  cursor: pointer;
+}
+
+.floating-add-button ion-icon {
+  font-size: 24px; /* Ikon lebih kecil */
+  color: #fff;
+}
+
+/* Jarak kanan dan kiri pada bar */
+/* Menambahkan ruang antar tab */
+ion-tab-button {
+  margin: 0 10px; /* Jarak antar tab */
+}

@@ -1,0 +1,25 @@
+.todo-details {
+    .todo-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    .todo-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+  
+    .todo-table td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+  
+    .todo-table td:first-child {
+      font-weight: bold;
+      width: 30%;
+    }
+  
+  }
+  

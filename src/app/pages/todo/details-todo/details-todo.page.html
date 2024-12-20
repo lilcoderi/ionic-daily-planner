@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/todo"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Todo Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="todo" class="ion-padding">
+  <div class="todo-details">
+    <h2 class="todo-title">{{ todo.title }}</h2>
+    <table class="todo-table">
+      <tr>
+        <td><strong>Description</strong></td>
+        <td>{{ todo.description }}</td>
+      </tr>
+      <tr>
+        <td><strong>Date</strong></td>
+        <td>{{ todo.date.toDate() | date }}</td>
+      </tr>
+      <tr>
+        <td><strong>Status</strong></td>
+        <td>{{ todo.completed ? 'Completed' : 'Process' }}</td>
+      </tr>
+    </table>
+
+    <ion-button expand="block" color="primary" (click)="goToEditTodo()">Edit Todo</ion-button>
+    <ion-button expand="block" color="danger" (click)="deleteTodo()">Delete Todo</ion-button>
+  </div>
+</ion-content>

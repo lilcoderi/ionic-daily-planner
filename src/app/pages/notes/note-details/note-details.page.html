@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home/notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Note Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="note" class="ion-padding">
+  <div class="note-details">
+    <h2 class="note-title">{{ note.title }}</h2>
+    <table class="note-table">
+      <tr>
+        <td><strong>Description</strong></td>
+        <td>{{ note.description }}</td>
+      </tr>
+      <tr>
+        <td><strong>Date</strong></td>
+        <td>{{ note.date.toDate() | date }}</td>
+      </tr>
+    </table>
+
+    <!-- Tombol Delete Notes -->
+    <ion-button expand="block" color="danger" (click)="confirmDeleteNote()">Delete Notes</ion-button>
+  </div>
+</ion-content>
+
+<ion-content *ngIf="!note" class="ion-padding">
+  <div class="spinner-container">
+    <ion-spinner name="crescent"></ion-spinner>
+  </div>
+</ion-content>
